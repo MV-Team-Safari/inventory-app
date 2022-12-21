@@ -17,7 +17,7 @@ const seed = async () => {
   }
   try {
     // drop and recreate tables per model definitions
-    await sequelize.sync({ force: true });
+    //await sequelize.sync({ force: true });
 
     // insert data
     await Promise.all(items.map((item) => Item.create(item)));
