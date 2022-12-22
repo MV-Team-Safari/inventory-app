@@ -1,5 +1,37 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  background-color: rgb(223, 223, 223);
+  background-color: rgba(223, 223, 223, 0);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.container {
+  align-items: center;
+}
+.navbar-view-all-btn,
+.navbar-add-btn {
+  height: 50px;
+  width: 200px;
+  background-color: rgba(185, 0, 0, 0.828);
+}
+
+.navbar-user-img {
+  height: 100px;
+  width: 100px;
+  border: 2px solid red;
+  border-radius: 50%;
+}
+
+.item-container {
+  display: flex;
+  align-items: center;
+}
+.item-img {
+  height: 100px;
+  width: 100px;
 }

@@ -3,6 +3,7 @@ import { ItemsList } from "./ItemsList";
 
 // import and prepend the api url to any fetch calls
 import apiURL from "../api";
+import Nav from "./Nav";
 
 export const App = () => {
   const [items, setItems] = useState([]);
@@ -24,6 +25,7 @@ export const App = () => {
 
   return (
     <main>
+      <Nav />
       <h1>Item Store</h1>
       <h2>All things 🔥</h2>
       <ItemsList items={items} />
