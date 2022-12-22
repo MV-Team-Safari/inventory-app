@@ -15,6 +15,10 @@ export default function Nav() {
           Add
         </button>
       </div>
+      <div className="nav-title">
+        <h1>Item Store</h1>
+        <h2>All things 🔥</h2>
+      </div>
 
       <a className="navbar-user" href="/">
         <img

@@ -26,8 +26,7 @@ export const App = () => {
   return (
     <main>
       <Nav />
-      <h1>Item Store</h1>
-      <h2>All things 🔥</h2>
+
       <ItemsList items={items} />
     </main>
   );
