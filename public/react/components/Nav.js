@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Nav() {
+export default function Nav({ isShowingList, setIsShowingList }) {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
@@ -8,6 +8,9 @@ export default function Nav() {
           className="navbar-view-all-btn"
           type="button"
           data-toggle="collapse"
+          onClick={() => {
+            setIsShowingList(!isShowingList);
+          }}
         >
           View All
         </button>

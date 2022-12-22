@@ -4,9 +4,11 @@ import { ItemsList } from "./ItemsList";
 // import and prepend the api url to any fetch calls
 import apiURL from "../api";
 import Nav from "./Nav";
+import WelcomeMessage from "./WelcomeMessage";
 
 export const App = () => {
   const [items, setItems] = useState([]);
+  const [isShowingList, setIsShowingList] = useState(false);
 
   async function fetchItems() {
     try {
@@ -25,9 +27,8 @@ export const App = () => {
 
   return (
     <main>
-      <Nav />
-
-      <ItemsList items={items} />
+      <Nav isShowingList={isShowingList} setIsShowingList={setIsShowingList} />
+      {isShowingList ? <ItemsList items={items} /> : <WelcomeMessage />}
     </main>
   );
 };
