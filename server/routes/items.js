@@ -9,7 +9,7 @@ router.get("/", async (req, res, next) => {
     // accesses all items in the database
     const items = await Item.findAll();
     // sending out an object with all items
-    res.send(items);
+    res.json(items);
   } catch (error) {
     next(error);
   }
