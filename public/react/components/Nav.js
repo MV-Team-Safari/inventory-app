@@ -1,6 +1,11 @@
 import React from "react";
 
-export default function Nav({ isShowingList, setIsShowingList }) {
+export default function Nav({
+  isShowingList,
+  setIsShowingList,
+  isShowingForm,
+  setIsShowingForm,
+}) {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
@@ -14,7 +19,14 @@ export default function Nav({ isShowingList, setIsShowingList }) {
         >
           View All
         </button>
-        <button className="navbar-add-btn" type="button" data-toggle="collapse">
+        <button
+          className="navbar-add-btn"
+          type="button"
+          data-toggle="collapse"
+          onClick={() => {
+            setIsShowingForm(!isShowingForm);
+          }}
+        >
           Add
         </button>
       </div>

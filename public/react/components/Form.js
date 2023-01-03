@@ -2,25 +2,45 @@ import React from "react";
 
 export const Form = () => {
   return (
-    <div className="form">
-      <form>
-        <label>
+    <div className="form-container">
+      <form className="form">
+        <label className="form-item-name">
           New Item Name:
-          <input type="text" name="item-name" />
+          <input
+            className="form-item-name-input"
+            type="text"
+            name="item-name"
+          />
         </label>
-        <label>
+        <label className="form-item-desc">
           New Item Description:
-          <input type="text" name="item-name" />
+          <input
+            className="form-item-desc-input"
+            type="text"
+            name="item-name"
+          />
         </label>
-        <label>
+        <label className="form-item-price">
           New Item Price:
-          <input type="text" name="item-name" />
+          <input
+            className="form-item-price-input"
+            type="text"
+            name="item-name"
+          />
         </label>
-        <label>
+        <label className="form-item-category">
           New Item Category:
-          <input type="text" name="item-name" />
+          <input
+            className="form-item-category-input"
+            type="text"
+            name="item-name"
+          />
         </label>
-        <input type="submit" value="Add Item" />
+        <input
+          className="form-item-submit-btn"
+          type="submit"
+          value="Add Item"
+        />
       </form>
     </div>
   );
