@@ -31,7 +31,6 @@ export const App = () => {
   return (
     <main>
       <Form />
-
       <Nav isShowingList={isShowingList} setIsShowingList={setIsShowingList} />
       <div className="main-view">
         {isShowingList ? (
@@ -39,7 +38,7 @@ export const App = () => {
         ) : (
           <WelcomeMessage />
         )}
-        {individualItem ? (
+        {individualItem && isShowingList ? (
           <IndividualItem individualItem={individualItem} />
         ) : null}
       </div>

@@ -53,3 +53,7 @@
 .main-view {
   display: flex;
 }
+
+.right-side-view {
+  width: 100%;
+}
