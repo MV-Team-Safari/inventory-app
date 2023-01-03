@@ -9,7 +9,7 @@ router.get("/", async (req, res, next) => {
     // accesses all items in the database
     const items = await Item.findAll();
     // sending out an object with all items
-    res.json(items);
+    res.send(items);
   } catch (error) {
     next(error);
   }
@@ -21,6 +21,13 @@ router.post('/', async (req, res) => {
   // add new Item to the database
   await Item.create(req.body);
     res.json( items );
+})
+
+router.put('/:id', async (req, res) => {
+  const newItem = req.body;
+  const itemUpdate = await Item.findByPk(req.params.id);
+  await itemUpdate.update(newItem);
+res.json( itemUpdate )
 })
 
 router.delete('/:id', async (req, res) => {
