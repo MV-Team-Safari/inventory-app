@@ -10,7 +10,6 @@ import { IndividualItem } from "./IndividualItem";
 export const App = () => {
   const [items, setItems] = useState([]);
   const [isShowingList, setIsShowingList] = useState(false);
-
   const [individualItem, setIndividualItem] = useState(null);
 
   async function fetchItems() {

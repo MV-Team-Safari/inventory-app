@@ -1,0 +1,22 @@
+            App - Top Level
+        /                 \
+    ItemsList          Individual Item  
+    / 
+ Item                  
+
+
+1. Make a new component
+2. Tested if connected to appjs
+3. in app js made a new state for tracking state of individual item in order to show
+4. passed setter through props to itemslist 
+5. passed individual item props to individual item component render in app js
+6. TO DO : Use the setter in onclick
+7. item we click on is to be displayed, so we pass it into setter in item js
+8. since we pass it in in app js, 
+
+
+
+notes from review:
+
+change line 19 in app js to response without .json
+and routes items js line 12 to res.json
