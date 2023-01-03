@@ -5,10 +5,13 @@ import { ItemsList } from "./ItemsList";
 import apiURL from "../api";
 import Nav from "./Nav";
 import WelcomeMessage from "./WelcomeMessage";
+import { IndividualItem } from "./IndividualItem";
 
 export const App = () => {
   const [items, setItems] = useState([]);
   const [isShowingList, setIsShowingList] = useState(false);
+
+  const [individualItem, setIndividualItem] = useState(null);
 
   async function fetchItems() {
     try {
@@ -27,8 +30,15 @@ export const App = () => {
 
   return (
     <main>
+      {individualItem ? (
+        <IndividualItem individualItem={individualItem} />
+      ) : null}
       <Nav isShowingList={isShowingList} setIsShowingList={setIsShowingList} />
-      {isShowingList ? <ItemsList items={items} /> : <WelcomeMessage />}
+      {isShowingList ? (
+        <ItemsList items={items} setIndividualItem={setIndividualItem} />
+      ) : (
+        <WelcomeMessage />
+      )}
     </main>
   );
 };
