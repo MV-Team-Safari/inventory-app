@@ -42,11 +42,14 @@
 .item-container {
   display: flex;
   align-items: center;
-  width: 50%;
+  width: 100%;
   border: 2px solid black;
 }
 .item-img,
 .individual-item-img {
   height: 100px;
   width: 100px;
+}
+.main-view {
+  display: flex;
 }

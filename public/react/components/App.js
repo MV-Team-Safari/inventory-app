@@ -6,11 +6,12 @@ import apiURL from "../api";
 import Nav from "./Nav";
 import WelcomeMessage from "./WelcomeMessage";
 import { IndividualItem } from "./IndividualItem";
+import { Form } from "./Form";
 
 export const App = () => {
   const [items, setItems] = useState([]);
   const [isShowingList, setIsShowingList] = useState(false);
-  const [individualItem, setIndividualItem] = useState(null);
+  const [individualItem, setIndividualItem] = useState(false);
 
   async function fetchItems() {
     try {
@@ -29,15 +30,19 @@ export const App = () => {
 
   return (
     <main>
-      {individualItem ? (
-        <IndividualItem individualItem={individualItem} />
-      ) : null}
+      <Form />
+
       <Nav isShowingList={isShowingList} setIsShowingList={setIsShowingList} />
-      {isShowingList ? (
-        <ItemsList items={items} setIndividualItem={setIndividualItem} />
-      ) : (
-        <WelcomeMessage />
-      )}
+      <div className="main-view">
+        {isShowingList ? (
+          <ItemsList items={items} setIndividualItem={setIndividualItem} />
+        ) : (
+          <WelcomeMessage />
+        )}
+        {individualItem ? (
+          <IndividualItem individualItem={individualItem} />
+        ) : null}
+      </div>
     </main>
   );
 };
