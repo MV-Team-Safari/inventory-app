@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import apiURL from "../api";
 import { UpdateForm } from "./UpdateForm";
 
 export const IndividualItem = (props) => {
+  const [isShowingForm, setIsShowingForm] = useState(false);
+
   async function deleteItem() {
     const response = await fetch(`${apiURL}/items/${props.individualItem.id}`, {
       method: "DELETE",
@@ -33,7 +35,14 @@ export const IndividualItem = (props) => {
         onClick={console.log("IMAGE INFO", props.individualItem.image)}
       ></img>
       <div className="individual-item-btns">
-        <button className="individual-item-update-btn">Update This Item</button>
+        <button
+          className="individual-item-update-btn"
+          onClick={() => {
+            setIsShowingForm(!isShowingForm);
+          }}
+        >
+          Update This Item
+        </button>
         <button
           className="individual-item-delete-btn"
           onClick={() => {
@@ -44,10 +53,16 @@ export const IndividualItem = (props) => {
         </button>
       </div>
       <div className="individual-item-update-form">
-        <UpdateForm
-          individualItem={props.individualItem}
-          setIndividualItem={props.setIndividualItem}
-        />
+        {isShowingForm ? (
+          <UpdateForm
+            individualItem={props.individualItem}
+            setIndividualItem={props.setIndividualItem}
+            isShowingForm={isShowingForm}
+            setIsShowingForm={setIsShowingForm}
+          />
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );

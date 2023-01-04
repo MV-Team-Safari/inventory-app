@@ -22,6 +22,7 @@ export const UpdateForm = (props) => {
 
       body: JSON.stringify(data),
     });
+    alert("Item updated successfully, you may refresh to see changes");
     return response.json();
   }
   return (
