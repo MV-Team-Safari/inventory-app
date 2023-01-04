@@ -12,6 +12,7 @@ export const App = () => {
   const [items, setItems] = useState([]);
   const [isShowingList, setIsShowingList] = useState(false);
   const [individualItem, setIndividualItem] = useState(false);
+  const [isShowingForm, setIsShowingForm] = useState(false);
 
   async function fetchItems() {
     try {
@@ -30,16 +31,21 @@ export const App = () => {
 
   return (
     <main>
-      <Form />
+      <Nav
+        isShowingList={isShowingList}
+        setIsShowingList={setIsShowingList}
+        isShowingForm={isShowingForm}
+        setIsShowingForm={setIsShowingForm}
+      />
+      {isShowingForm ? <Form /> : null}
 
-      <Nav isShowingList={isShowingList} setIsShowingList={setIsShowingList} />
       <div className="main-view">
         {isShowingList ? (
           <ItemsList items={items} setIndividualItem={setIndividualItem} />
         ) : (
           <WelcomeMessage />
         )}
-        {individualItem ? (
+        {individualItem && isShowingList ? (
           <IndividualItem individualItem={individualItem} />
         ) : null}
       </div>

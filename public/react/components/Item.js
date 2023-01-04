@@ -8,6 +8,7 @@ export const Item = (props) => {
       <h3
         onClick={() => {
           props.setIndividualItem(props.item);
+          console.log(props.item);
         }}
       >
         {props.item.title}
