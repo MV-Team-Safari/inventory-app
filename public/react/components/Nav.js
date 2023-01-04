@@ -31,14 +31,14 @@ export default function Nav({
         </button>
       </div>
       <div className="nav-title">
-        <h1>Item Store</h1>
-        <h2>All things 🔥</h2>
+        <h1>The Object Shop</h1>
+        <h2>Find your favorite things</h2>
       </div>
 
       <a className="navbar-user" href="/">
         <img
           className="navbar-user-img"
-          src="https://ak.picdn.net/shutterstock/videos/1029117641/thumb/1.jpg?ip=x480"
+          src="https://www.repicture.com/assets/images/default.png"
         />
       </a>
     </nav>

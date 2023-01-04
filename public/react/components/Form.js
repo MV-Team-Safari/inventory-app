@@ -10,7 +10,7 @@ export const Form = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const data = { title, description, price, category, imgURL };
+    const data = { title, description, price, category, image: imgURL };
     console.log(data);
     const response = await fetch(`${apiURL}/items`, {
       method: "POST",
