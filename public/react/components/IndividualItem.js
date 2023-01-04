@@ -8,6 +8,7 @@ export const IndividualItem = (props) => {
     });
     const data = await response.json();
     console.log("deleteItem", data);
+    alert("Item deleted successfully, you may refresh to see changes");
   }
 
   console.log(props.individualItem);
