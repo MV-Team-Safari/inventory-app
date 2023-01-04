@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import apiURL from "../api";
 import { UpdateForm } from "./UpdateForm";
 
 export const IndividualItem = (props) => {
+  const [isShowingForm, setIsShowingForm] = useState(false);
+
   async function deleteItem() {
     const response = await fetch(`${apiURL}/items/${props.individualItem.id}`, {
       method: "DELETE",
@@ -36,7 +38,7 @@ export const IndividualItem = (props) => {
         <button
           className="individual-item-update-btn"
           onClick={() => {
-            updateItem();
+            setIsShowingForm(!isShowingForm);
           }}
         >
           Update This Item
@@ -51,10 +53,16 @@ export const IndividualItem = (props) => {
         </button>
       </div>
       <div className="individual-item-update-form">
-        <UpdateForm
-          individualItem={props.individualItem}
-          setIndividualItem={props.setIndividualItem}
-        />
+        {isShowingForm ? (
+          <UpdateForm
+            individualItem={props.individualItem}
+            setIndividualItem={props.setIndividualItem}
+            isShowingForm={isShowingForm}
+            setIsShowingForm={setIsShowingForm}
+          />
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );
