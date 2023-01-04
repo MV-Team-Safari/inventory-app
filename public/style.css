@@ -10,8 +10,9 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  width: 100%;
   align-items: center;
+  background-color: black;
+  color: #e8e8e8;
 }
 .nav-title {
   display: flex;
@@ -22,8 +23,8 @@
 }
 .nav-title h2 {
   font-style: italic;
-  font-size: 20px;
-  color: grey;
+  font-size: 10px;
+  color: #cb997e;
 }
 .container {
   align-items: center;
@@ -35,49 +36,104 @@
 .individual-item-delete-btn {
   height: 50px;
   width: 200px;
-  background-color: rgba(185, 0, 0, 0.828);
+  background-color: #cb997e;
+  border: 2px solid #cb997e;
+  border-radius: 20px;
+  margin-right: 20px;
 }
 
 .navbar-user-img {
   height: 100px;
   width: 100px;
-
   border-radius: 50%;
 }
 
 .item-container {
   display: flex;
   align-items: center;
-  width: 100%;
-  border: 2px solid black;
+  border: 2px solid #cb997e;
+  cursor: pointer;
+  margin: 10px;
+  padding: 30px;
+}
+
+.item-container:hover {
+  color: #cb997e;
 }
 .item-img,
 .individual-item-img {
   height: 100px;
   width: 100px;
 }
-.main-view {
-  display: flex;
+.individual-item-img {
+  height: 400px;
+  width: 500px;
 }
+.individual-item-btns {
+  display: flex;
+  margin-top: 30px;
+}
+.main-view {
+  background-color: black;
+  color: white;
 
-.right-side-view {
-  width: 100%;
+  display: flex;
+  padding-bottom: 100%;
 }
 
 .form-container * {
   display: block;
+  background-color: black;
+  color: #cb997e;
+}
+.form-container input {
+  color: white;
+  height: 50px;
+  width: 500px;
 }
 
 .individual-item-update-btn,
 .individual-item-delete-btn {
-  display: inline-block;
-  margin: 10px 20px;
+  display: block;
+  margin-left: 20px;
 }
 
 .welcome-message {
-  width: 100%;
-  background-color: red;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: black;
+  display: inline;
+}
+
+.welcome-message-content {
+  color: white;
+}
+
+.welcome-message-content-heading {
+  font-size: 100px;
+  color: #cb997e;
+}
+
+.welcome-message-content-p1,
+.welcome-message-content-p2 {
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.grey {
+  color: #cb997e;
+}
+
+.welcome-message-img {
+  width: 50%;
+  margin-top: 50px;
+  display: block;
+}
+
+.left-side-view {
+  margin-right: 20px;
+}
+.individual-item-title,
+.individual-item-desc,
+.individual-item-price,
+.individual-item-category {
+  margin-bottom: 20px;
 }
