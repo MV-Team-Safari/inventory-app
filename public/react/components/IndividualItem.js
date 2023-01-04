@@ -51,7 +51,10 @@ export const IndividualItem = (props) => {
         </button>
       </div>
       <div className="individual-item-update-form">
-        <UpdateForm />
+        <UpdateForm
+          individualItem={props.individualItem}
+          setIndividualItem={props.setIndividualItem}
+        />
       </div>
     </div>
   );

@@ -13,7 +13,7 @@ export const UpdateForm = (props) => {
     const data = { title, description, price, category, imgURL };
     console.log(data);
 
-    const response = await fetch(`${apiURL}/items/${props.individualItem}`, {
+    const response = await fetch(`${apiURL}/items/${props.individualItem.id}`, {
       method: "PUT",
 
       headers: {
