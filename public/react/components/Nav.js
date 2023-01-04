@@ -1,6 +1,11 @@
 import React from "react";
 
-export default function Nav({ isShowingList, setIsShowingList }) {
+export default function Nav({
+  isShowingList,
+  setIsShowingList,
+  isShowingForm,
+  setIsShowingForm,
+}) {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
@@ -14,8 +19,15 @@ export default function Nav({ isShowingList, setIsShowingList }) {
         >
           View All
         </button>
-        <button className="navbar-add-btn" type="button" data-toggle="collapse">
-          Add
+        <button
+          className="navbar-add-btn"
+          type="button"
+          data-toggle="collapse"
+          onClick={() => {
+            setIsShowingForm(!isShowingForm);
+          }}
+        >
+          Add Item
         </button>
       </div>
       <div className="nav-title">
@@ -26,7 +38,7 @@ export default function Nav({ isShowingList, setIsShowingList }) {
       <a className="navbar-user" href="/">
         <img
           className="navbar-user-img"
-          src="https://fairtradesafaris.com/wp-content/uploads/2021/06/1097003_FTS-JuneBlogs-10trees-Umbrella-Thorn_061521.png"
+          src="https://ak.picdn.net/shutterstock/videos/1029117641/thumb/1.jpg?ip=x480"
         />
       </a>
     </nav>

@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
 * {
   margin: 0;
   box-sizing: border-box;
   background-color: rgba(223, 223, 223, 0);
+  font-family: "Manrope", sans-serif;
 }
 
 .navbar {
@@ -26,7 +29,10 @@
   align-items: center;
 }
 .navbar-view-all-btn,
-.navbar-add-btn {
+.navbar-add-btn,
+.form-item-submit-btn,
+.individual-item-update-btn,
+.individual-item-delete-btn {
   height: 50px;
   width: 200px;
   background-color: rgba(185, 0, 0, 0.828);
@@ -35,7 +41,7 @@
 .navbar-user-img {
   height: 100px;
   width: 100px;
-  border: 2px solid red;
+
   border-radius: 50%;
 }
 
@@ -56,4 +62,22 @@
 
 .right-side-view {
   width: 100%;
+}
+
+.form-container * {
+  display: block;
+}
+
+.individual-item-update-btn,
+.individual-item-delete-btn {
+  display: inline-block;
+  margin: 10px 20px;
+}
+
+.welcome-message {
+  width: 100%;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
