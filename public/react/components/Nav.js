@@ -38,7 +38,7 @@ export default function Nav({
       <a className="navbar-user" href="/">
         <img
           className="navbar-user-img"
-          src="https://fairtradesafaris.com/wp-content/uploads/2021/06/1097003_FTS-JuneBlogs-10trees-Umbrella-Thorn_061521.png"
+          src="https://ak.picdn.net/shutterstock/videos/1029117641/thumb/1.jpg?ip=x480"
         />
       </a>
     </nav>

@@ -30,7 +30,9 @@
 }
 .navbar-view-all-btn,
 .navbar-add-btn,
-.form-item-submit-btn {
+.form-item-submit-btn,
+.individual-item-update-btn,
+.individual-item-delete-btn {
   height: 50px;
   width: 200px;
   background-color: rgba(185, 0, 0, 0.828);
@@ -39,7 +41,7 @@
 .navbar-user-img {
   height: 100px;
   width: 100px;
-  border: 2px solid red;
+
   border-radius: 50%;
 }
 
@@ -64,6 +66,12 @@
 
 .form-container * {
   display: block;
+}
+
+.individual-item-update-btn,
+.individual-item-delete-btn {
+  display: inline-block;
+  margin: 10px 20px;
 }
 
 .welcome-message {

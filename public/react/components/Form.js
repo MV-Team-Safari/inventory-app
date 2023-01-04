@@ -80,7 +80,7 @@ export const Form = () => {
         <input
           className="form-item-submit-btn"
           type="submit"
-          value="Submit Your Item"
+          value="Submit New Item"
         />
       </form>
     </div>
