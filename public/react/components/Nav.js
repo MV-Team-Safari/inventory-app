@@ -27,7 +27,7 @@ export default function Nav({
             setIsShowingForm(!isShowingForm);
           }}
         >
-          Add
+          Add Item
         </button>
       </div>
       <div className="nav-title">
