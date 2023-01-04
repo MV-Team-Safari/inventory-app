@@ -30,34 +30,42 @@ export const UpdateForm = (props) => {
         <label>Update Title:</label>
         <input
           type="text"
-          value={title === "" ? props.individualItem.title : title}
+          value={title}
+          placeholder={props.individualItem.title}
           onChange={(event) => setTitle(event.target.value)}
+          required
         ></input>
         <label>Update Description:</label>
         <input
           type="text"
-          value={
-            description === "" ? props.individualItem.description : description
-          }
+          value={description}
+          placeholder={props.individualItem.description}
           onChange={(event) => setDescription(event.target.value)}
+          required
         ></input>
         <label>Update Price:</label>
         <input
           type="number"
-          value={price === "" ? props.individualItem.price : price}
+          value={price}
+          placeholder={props.individualItem.price}
           onChange={(event) => setPrice(event.target.value)}
+          required
         ></input>
         <label>Update Category:</label>
         <input
           type="text"
-          value={category === "" ? props.individualItem.category : category}
+          value={category}
+          placeholder={props.individualItem.category}
           onChange={(event) => setCategory(event.target.value)}
+          required
         ></input>
         <label>Update Image URL:</label>
         <input
           type="text"
-          value={imgURL === "" ? props.individualItem.image : imgURL}
+          value={imgURL}
+          placeholder={props.individualItem.image}
           onChange={(event) => setImgURL(event.target.value)}
+          required
         ></input>
         <input
           className="update-form-item-submit-btn"

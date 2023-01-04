@@ -83,6 +83,11 @@
   padding-bottom: 100%;
 }
 
+input::placeholder {
+  color: #ebd0ef;
+  opacity: 0.5;
+}
+
 .form-container * {
   display: block;
   background-color: black;

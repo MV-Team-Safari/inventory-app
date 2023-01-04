@@ -33,14 +33,7 @@ export const IndividualItem = (props) => {
         onClick={console.log("IMAGE INFO", props.individualItem.image)}
       ></img>
       <div className="individual-item-btns">
-        <button
-          className="individual-item-update-btn"
-          onClick={() => {
-            updateItem();
-          }}
-        >
-          Update This Item
-        </button>
+        <button className="individual-item-update-btn">Update This Item</button>
         <button
           className="individual-item-delete-btn"
           onClick={() => {
