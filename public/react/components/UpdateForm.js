@@ -30,31 +30,33 @@ export const UpdateForm = (props) => {
         <label>Update Title:</label>
         <input
           type="text"
-          value={title}
+          value={title === "" ? props.individualItem.title : title}
           onChange={(event) => setTitle(event.target.value)}
         ></input>
         <label>Update Description:</label>
         <input
           type="text"
-          value={description}
+          value={
+            description === "" ? props.individualItem.description : description
+          }
           onChange={(event) => setDescription(event.target.value)}
         ></input>
         <label>Update Price:</label>
         <input
           type="number"
-          value={price}
+          value={price === "" ? props.individualItem.price : price}
           onChange={(event) => setPrice(event.target.value)}
         ></input>
         <label>Update Category:</label>
         <input
           type="text"
-          value={category}
+          value={category === "" ? props.individualItem.category : category}
           onChange={(event) => setCategory(event.target.value)}
         ></input>
         <label>Update Image URL:</label>
         <input
           type="text"
-          value={imgURL}
+          value={imgURL === "" ? props.individualItem.image : imgURL}
           onChange={(event) => setImgURL(event.target.value)}
         ></input>
         <input
