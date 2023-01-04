@@ -3,7 +3,7 @@ import React, { useState } from "react";
 export const UpdateForm = () => {
   return (
     <div>
-      <form>
+      <form className="update-form-container">
         <label>Update Title:</label>
         <input type="text"></input>
         <label>Update Description:</label>

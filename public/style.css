@@ -86,11 +86,31 @@
   background-color: black;
   color: #cb997e;
 }
+
 .form-container input {
   color: white;
   height: 50px;
   width: 500px;
 }
+
+.update-form-container {
+  margin-top: 50px;
+}
+.update-form-container * {
+  display: block;
+  margin-top: 10px;
+  background-color: black;
+  color: #cb997e;
+}
+
+.update-form-container input {
+  color: white;
+  height: 50px;
+  width: 500px;
+}
+/* .individual-item-update-form {
+  visibility: hidden;
+} */
 
 .individual-item-update-btn,
 .individual-item-delete-btn {

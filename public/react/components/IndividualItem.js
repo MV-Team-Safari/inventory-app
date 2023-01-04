@@ -1,5 +1,6 @@
 import React from "react";
 import apiURL from "../api";
+import { UpdateForm } from "./UpdateForm";
 
 export const IndividualItem = (props) => {
   async function deleteItem() {
@@ -29,6 +30,7 @@ export const IndividualItem = (props) => {
       <img
         className="individual-item-img"
         src={props.individualItem.image}
+        onClick={console.log("IMAGE INFO", props.individualItem.image)}
       ></img>
       <div className="individual-item-btns">
         <button className="individual-item-update-btn">Update This Item</button>
@@ -40,6 +42,9 @@ export const IndividualItem = (props) => {
         >
           Delete This Item
         </button>
+      </div>
+      <div className="individual-item-update-form">
+        <UpdateForm />
       </div>
     </div>
   );
