@@ -2,7 +2,7 @@ import React from "react";
 import apiURL from "../api";
 import { UpdateForm } from "./UpdateForm";
 
-export const IndividualItem = (props) => {
+export default function IndividualItem(props){
   async function deleteItem() {
     const response = await fetch(`${apiURL}/items/${props.individualItem.id}`, {
       method: "DELETE",
@@ -10,6 +10,14 @@ export const IndividualItem = (props) => {
     const data = await response.json();
     console.log("deleteItem", data);
     alert("Item deleted successfully, you may refresh to see changes");
+  }
+
+  const updateItem = async () => {
+    const response = await fetch(`${apiURL}/items/${props.individualItem.id}`, {
+      method: "PUT",
+    })
+    const data = await response.json();
+    console.log("updateItem", data);
   }
 
   console.log(props.individualItem);
@@ -32,30 +40,15 @@ export const IndividualItem = (props) => {
         src={props.individualItem.image}
         onClick={console.log("IMAGE INFO", props.individualItem.image)}
       ></img>
-      <div className="individual-item-btns">
-        <button
-          className="individual-item-update-btn"
-          onClick={() => {
-            updateItem();
-          }}
-        >
-          Update This Item
-        </button>
-        <button
-          className="individual-item-delete-btn"
-          onClick={() => {
-            deleteItem();
-          }}
-        >
-          Delete This Item
-        </button>
-      </div>
-      <div className="individual-item-update-form">
-        <UpdateForm
-          individualItem={props.individualItem}
-          setIndividualItem={props.setIndividualItem}
-        />
-      </div>
+      <button className="individual-item-update-btn">Update This Item</button>
+      <button
+        className="individual-item-delete-btn"
+        onClick={() => {
+          deleteItem();
+        }}
+      >
+        Delete This Item
+      </button>
     </div>
   );
 };

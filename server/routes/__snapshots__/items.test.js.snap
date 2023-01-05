@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`React Tests Should Render Form Component 1`] = `
+<div
+  className="form-container"
+>
+  <form
+    className="form"
+    onSubmit={[Function]}
+  >
+    <label
+      className="form-item-name"
+    >
+      New Item Name/Title:
+      <input
+        className="form-item-name-input"
+        name="item-name"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </label>
+    <label
+      className="form-item-desc"
+    >
+      New Item Description:
+      <input
+        className="form-item-desc-input"
+        name="item-description"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </label>
+    <label
+      className="form-item-price"
+    >
+      New Item Price:
+      <input
+        className="form-item-price-input"
+        name="item-price"
+        onChange={[Function]}
+        type="number"
+        value=""
+      />
+    </label>
+    <label
+      className="form-item-category"
+    >
+      New Item Category:
+      <input
+        className="form-item-category-input"
+        name="item-category"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </label>
+    <label
+      className="form-item-img"
+    >
+      Image URL:
+      <input
+        className="form-item-img-input"
+        name="item-img-url"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </label>
+    <input
+      className="form-item-submit-btn"
+      type="submit"
+      value="Submit New Item"
+    />
+  </form>
+</div>
+`;
+
+exports[`React Tests Should Render Nav Component 1`] = `
+<nav
+  className="navbar navbar-expand-lg navbar-dark bg-dark"
+>
+  <div
+    className="container"
+  >
+    <button
+      className="navbar-view-all-btn"
+      data-toggle="collapse"
+      onClick={[Function]}
+      type="button"
+    >
+      View All
+    </button>
+    <button
+      className="navbar-add-btn"
+      data-toggle="collapse"
+      onClick={[Function]}
+      type="button"
+    >
+      Add Item
+    </button>
+  </div>
+  <div
+    className="nav-title"
+  >
+    <h1>
+      The Object Shop
+    </h1>
+    <h2>
+      Find your favorite things
+    </h2>
+  </div>
+  <a
+    className="navbar-user"
+    href="/"
+  >
+    <img
+      className="navbar-user-img"
+      src="https://www.repicture.com/assets/images/default.png"
+    />
+  </a>
+</nav>
+`;
+
+exports[`React Tests Should Render WelcomeMessage Component 1`] = `
+<div
+  className="welcome-message"
+>
+  <div
+    className="welcome-message-content"
+  >
+    <h1
+      className="welcome-message-content-heading"
+    >
+      Welcome To Your Inventory!
+    </h1>
+    <p
+      className="welcome-message-content-p1"
+    >
+      Click 
+      <span
+        className="grey"
+      >
+        View All Button
+      </span>
+       to view all of your items.
+    </p>
+    <p
+      className="welcome-message-content-p2"
+    >
+      Click 
+      <span
+        className="grey"
+      >
+        Add Item Button
+      </span>
+       to add a new item to your inventory.
+    </p>
+    <img
+      className="welcome-message-img"
+      src="https://media.tenor.com/J49ROi-SxSMAAAAC/the-office-steve-carell.gif"
+    />
+  </div>
+</div>
+`;
