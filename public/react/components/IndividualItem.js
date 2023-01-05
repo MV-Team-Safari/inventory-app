@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import apiURL from "../api";
 import { UpdateForm } from "./UpdateForm";
 
-export default function IndividualItem(props){
+export const IndividualItem = (props) => {
+  const [isShowingForm, setIsShowingForm] = useState(false);
+
   async function deleteItem() {
     const response = await fetch(`${apiURL}/items/${props.individualItem.id}`, {
       method: "DELETE",
@@ -40,15 +42,36 @@ export default function IndividualItem(props){
         src={props.individualItem.image}
         onClick={console.log("IMAGE INFO", props.individualItem.image)}
       ></img>
-      <button className="individual-item-update-btn">Update This Item</button>
-      <button
-        className="individual-item-delete-btn"
-        onClick={() => {
-          deleteItem();
-        }}
-      >
-        Delete This Item
-      </button>
+      <div className="individual-item-btns">
+        <button
+          className="individual-item-update-btn"
+          onClick={() => {
+            setIsShowingForm(!isShowingForm);
+          }}
+        >
+          Update This Item
+        </button>
+        <button
+          className="individual-item-delete-btn"
+          onClick={() => {
+            deleteItem();
+          }}
+        >
+          Delete This Item
+        </button>
+      </div>
+      <div className="individual-item-update-form">
+        {isShowingForm ? (
+          <UpdateForm
+            individualItem={props.individualItem}
+            setIndividualItem={props.setIndividualItem}
+            isShowingForm={isShowingForm}
+            setIsShowingForm={setIsShowingForm}
+          />
+        ) : (
+          <></>
+        )}
+      </div>
     </div>
   );
 };
