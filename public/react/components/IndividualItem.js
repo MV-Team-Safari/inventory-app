@@ -14,14 +14,6 @@ export const IndividualItem = (props) => {
     alert("Item deleted successfully, you may refresh to see changes");
   }
 
-  const updateItem = async () => {
-    const response = await fetch(`${apiURL}/items/${props.individualItem.id}`, {
-      method: "PUT",
-    })
-    const data = await response.json();
-    console.log("updateItem", data);
-  }
-
   console.log(props.individualItem);
   return (
     <div className="individual-item right-side-view">

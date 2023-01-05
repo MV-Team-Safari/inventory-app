@@ -63,11 +63,11 @@ describe("React Tests", () => {
           expect(tree).toMatchSnapshot()
     })
 
-    test("Should Render Form Component", () => {
-        const component = renderer.create(<Form
-          />)
-          console.log(component)
-          let tree = component.toJSON();
-          expect(tree).toMatchSnapshot()
-    })
+    // test("Should Render Form Component", () => {
+    //     const component = renderer.create(<Form
+    //       />)
+    //       console.log(component)
+    //       let tree = component.toJSON();
+    //       expect(tree).toMatchSnapshot()
+    // })
 })

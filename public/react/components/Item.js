@@ -1,7 +1,7 @@
 import React from "react";
 import { IndividualItem } from "./IndividualItem";
 
-export default function Item(props){
+export const Item = (props) => {
   return (
     <div
       className="item-container"

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import apiURL from "../api";
 
-export default function Form() {
+export const Form = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
