@@ -21,6 +21,7 @@ export const Form = () => {
 
       body: JSON.stringify(data),
     });
+    alert("Item updated added, you may refresh to see changes");
     return response.json();
   }
 

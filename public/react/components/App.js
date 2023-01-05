@@ -7,7 +7,6 @@ import Nav from "./Nav";
 import WelcomeMessage from "./WelcomeMessage";
 import { IndividualItem } from "./IndividualItem";
 import { Form } from "./Form";
-import { UpdateForm } from "./UpdateForm";
 
 export const App = () => {
   const [items, setItems] = useState([]);
